@@ -1,0 +1,9 @@
+{
+    "Carro":"Renault",
+    "Caracteristicas":
+    {
+       "Placa":"EGM886",
+       "Color":"Gris",
+       "Modelo":2018
+    }
+}
