@@ -1,0 +1,21 @@
+name: Otro ejemplo de pipeline
+on:
+  pull_request:
+    branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Revisar repositorio
+      uses: actions/checkout@v1
+    - name: Leer package.json
+      id: package
+      uses: juliangruber/read-file-action@v1
+      with:
+        path: ./package.json
+    - name : Echo package.json
+      run: echo "${{ steps.package.outputs.content }}"
